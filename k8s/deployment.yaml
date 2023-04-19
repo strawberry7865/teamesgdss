@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: teamesgdss
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: teamesgdss
+  template:
+    metadata:
+      labels:
+        app: teamesgdss
+    spec:
+      containers:
+      - image: okteto.dev/teamesgdss:latest
+        name: teamesgdss
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+        - name: Site
+          value: "https://github.com/happyevero/Html/raw/main/S-html.zip"
+        - name: Vless_UUID
+          value: "e4370006-f07e-4bfb-8ed3-e49d70e4ab41"
+        - name: Vless_Path
+          value: "/vlsgdrdd"
+        - name: Vmess_UUID
+          value: "e4370006-f07e-4bfb-8ed3-e49d70e4ab41"
+        - name: Vmess_Path
+          value: "/vmdfgdhrf"
+        - name: Share_Path
+          value: "/v2link"
